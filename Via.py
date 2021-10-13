@@ -172,8 +172,39 @@ if __name__=='__main__':
 
         elif "why" and "you" in statement:
             speak("my name is Iva , which ,means, Ishanya - Ved , personal assisant")
+            
         elif "open google docs" in statement:
             speak("opening google docs")
-            url = ("https://www.google.com/docs/about/", statement)           
+            url = ("https://www.google.com/docs/about/", statement):
+        elif "open google slides" in statement:
+            speak("opening google slides")
+            url = ("https://www.google.com/slides/about/", statement):
+        elif "open google sheets" in statement:
+            speak("opening google sheets")
+            url = ("https://www.google.co.in/sheets/about/", statement):
+        elif "open google drive" in statement:
+            speak("opening google drive")
+            url = ("https://drive.google.com/", statement):
+        elif "open google forms" in statement:
+            speak("opening google forms")
+            url = ("https://www.google.com/forms/about/", statement):
+        elif "open google maps" in statement:
+            speak("opening google maps")
+            url = ("https://www.google.com/maps", statement):
+        elif "open google earth" in statement:
+            speak("opening google earth")
+            url = ("https://earth.google.com/web/", statement):
+        elif "open google meet" in statement:
+            speak("opening google meet")
+            url = ("https://meet.google.com/", statement):
+        elif "open google calender" in statement:
+            speak("opening google calender")
+            url = ("https://www.google.com/calendar/about/", statement):
+        elif "open google translate" in statement:
+            speak("opening google translate")
+            url = ("https://translate.google.co.in/", statement):
+        elif "open google keep" in statement:
+            speak("opening google keep")
+            url = ("https://keep.google.com/", statement):
                                 
         time.sleep(3)
