@@ -202,7 +202,7 @@ if __name__=='__main__':
             url = ("https://www.google.com/calendar/about/"), statement
         elif "open google translate" in statement:
             speak("opening google translate")
-            url = ("https://translate.google.co.in/", statement
+            url = ("https://translate.google.co.in/"), statement
         elif "open google keep" in statement:
             speak("opening google keep")
             url = ("https://keep.google.com/"), statement
