@@ -48,14 +48,14 @@ def takeCommand():
             return "None"
         return statement
     
-print("Loading your AI personal assistant")
-speak("Hi,  I,  am,  your,  personal,  assistant.")
+print("Loading your personal assistant")
+speak("Hi,I am your personal assistant.")
 wishMe()
 if __name__=='__main__':
 
 
     while True:
-        speak("Tell,  me,  how,  can,  I,  help,  you,  now?")
+        speak("Tell me, how can I help you?")
         statement = takeCommand().lower()
         if statement==0:
             continue
@@ -156,7 +156,14 @@ if __name__=='__main__':
         elif "log off" in statement or "sign out" in statement:
                     speak("Ok , your pc will log off in 10 sec make sure you exit from all applications")
                     subprocess.call(["shutdown", "/l"])
+        elif "who is" in statement:
+                    statement =statement.replace("wikipedia", "")
+                    results = wikipedia.summary(statement, sentences=3)
+                    speak("According to Wikipedia")
+                    print(results)
+                    speak(results)
 
+        
         elif "what" in statement or "how" in statement or "when" in statement or "where" in statement or "who" in statement:
                     speak("showing search results by google" or "showing web results")
                     url = ("https://www.google.com.tr/search?q=", statement)  
@@ -167,13 +174,13 @@ if __name__=='__main__':
         elif "update yourself"  in statement or "self update" in statement or "update" in statement:
                     speak (" restarting for update")
                     print("....")
-                    time.sleep(7)
+                    time.sleep(5)
                     import Via
 
         elif "why" and "you" in statement:
             speak("my name is Iva , which ,means, Ishanya - Ved , personal assisant")
             
-       elif "open google docs" in statement:
+        elif "open google docs" in statement:
             speak("opening google docs")
             url = ("https://www.google.com/docs/about/"), statement 
         elif "open google slides" in statement:
@@ -202,9 +209,22 @@ if __name__=='__main__':
             url = ("https://www.google.com/calendar/about/"), statement
         elif "open google translate" in statement:
             speak("opening google translate")
-            url = ("https://translate.google.co.in/", statement
+            url = ("https://translate.google.co.in/"), statement
         elif "open google keep" in statement:
             speak("opening google keep")
             url = ("https://keep.google.com/"), statement
+            
+        elif "open youtube" in statement: 
+            webbrowser.open_new_tab("https://www.youtube.com")
+            speak("youtube is open now")
+            time.sleep(5)
+
+        elif "youtube" in statement or "play" in statement:
+            url = "https://www.google.com.tr/search?q=",statement  
+            webbrowser.open_new_tab(url)
+            speak("contacting your browser")            
+
+        elif 'open google' in statement:
+                    webbrowser.open_new_tab("https://www.google.com")
                                 
-        time.sleep(3)
+        time.sleep(1)
