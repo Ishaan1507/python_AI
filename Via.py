@@ -77,6 +77,11 @@ if __name__=='__main__':
                     webbrowser.open_new_tab("https://www.youtube.com")
                     speak("youtube is open now")
                     time.sleep(5)
+                    
+        elif 'youtube' in statement:
+                    url = f"https://www.google.com.tr/search?q={statement}"  
+                    webbrowser.open_new_tab(url)
+                    speak("contacting your browser")            
 
         elif 'open google' in statement:
                     webbrowser.open_new_tab("https://www.google.com")
