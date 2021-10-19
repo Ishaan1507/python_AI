@@ -176,6 +176,14 @@ if __name__=='__main__':
                     print("....")
                     time.sleep(5)
                     import Via
+                    
+        elif "Microsoft" in statement :
+                   split_statement = statement.split()
+                   application = split_statement[-1]
+                   path = "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Office\Microsoft", application, "2010.Ink"
+                   os.startfile(path)                   
+                   speak(application, "word is open now")            
+                    
 
         elif "why" and "you" in statement:
             speak("my name is Iva , which ,means, Ishanya - Ved , personal assisant")
