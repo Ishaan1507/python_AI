@@ -1,4 +1,5 @@
 import speech_recognition as sr
+import face_detector
 import wikipedia
 import webbrowser
 import requests
