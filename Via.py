@@ -1,3 +1,4 @@
+#this program won't work on versoins after python 3.7
 import speech_recognition as sr
 import face_detector
 import wikipedia
